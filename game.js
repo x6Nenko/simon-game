@@ -46,6 +46,13 @@ $(document).keypress(function() {
     }
 });
 
+$("#level-title").click(function() {
+    if (!started) {
+        nextSequence();
+        started = true;
+    }
+});
+
 function checkAnswer() {
      if (gamePattern.length === userClickedPattern.length && gamePattern.every((v, i) => v === userClickedPattern[i])) {
         setTimeout(nextSequence, 1000);
