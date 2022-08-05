@@ -46,7 +46,7 @@ $(document).keypress(function() {
     }
 });
 
-$("#level-title").Touch(function() {
+$("#level-title").click(function() {
     if (!started) {
         nextSequence();
         started = true;
